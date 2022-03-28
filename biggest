@@ -1,0 +1,24 @@
+import java.io.*;
+class biggest {
+	public static void main(String[] args)throws Exception
+	{
+		
+	  InputStreamReader isr=new InputStreamReader(System.in);
+	  BufferedReader br=new BufferedReader(isr);
+	    int a,b;
+	    System.out.println("enter two numbers");
+	    a=Integer.parseInt(br.readLine());
+	    b=Integer.parseInt(br.readLine());
+		int big;
+		if(a>b)
+		{
+			big=a;
+		}
+		else
+		{
+			big=b;
+		}
+		System.out.println(big);
+	}
+
+}
