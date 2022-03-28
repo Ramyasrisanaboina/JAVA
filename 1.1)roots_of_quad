@@ -1,0 +1,35 @@
+import java.io.*;
+public class exp1rootsofquad {
+	public static void main(String[] args)throws Exception
+	{
+
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		double a,b,c,root1,root2;
+		a=Double.parseDouble(br.readLine());
+		b=Double.parseDouble(br.readLine());
+		c=Double.parseDouble(br.readLine());
+		double det=b*b-4*a*c;
+		if(det>0.0)//roots are real and distinct
+		{
+			root1=(-b + Math.sqrt(det))/2*a;
+			root2=(-b - Math.sqrt(det))/2*a;
+			System.out.printf(" root1=%.2f and root2=%.2f",root1,root2);
+		}
+		else if(det==0.0)//roots are real and unequal
+		{
+			root1=-b/2*a;
+			System.out.printf(" root1=root2=%.2f",root1);
+		}
+		else//roots are complex and distinct
+		{
+			double real=-b/2*a;
+			double imaginary=Math.sqrt(-det)/2*a;
+			System.out.printf(" root1=%.2f+%.2fi",real,imaginary);
+			System.out.printf(" root1=%.2f-%.2fi",real,imaginary);
+			
+			
+		}
+	}
+
+}
