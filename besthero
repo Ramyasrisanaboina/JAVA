@@ -1,0 +1,32 @@
+import java.io.*;
+public class ramya {
+	public static void main(String[] args)throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+	    int hit1,avg1,flop1;
+		int hit2,avg2,flop2;
+		String hero1,hero2;
+		hero1=br.readLine();
+		hit1=Integer.parseInt(br.readLine());
+		avg1=Integer.parseInt(br.readLine());
+		flop1=Integer.parseInt(br.readLine());
+		hero2=br.readLine();
+		hit2=Integer.parseInt(br.readLine());
+		avg2=Integer.parseInt(br.readLine());
+		flop2=Integer.parseInt(br.readLine());
+		int t1=hit1*10+avg1*5+flop1*(-5);
+		int t2=hit2*10+avg2*5+flop2*(-5);
+		if(t1>t2)
+		{
+			System.out.println(hero1+"is the best hero with"+t1+"points");
+		}
+		else
+		{
+			System.out.println(hero2+"is the best hero with"+t2+"points");
+		}
+		
+		
+	}
+
+}
