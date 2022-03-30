@@ -1,0 +1,24 @@
+import java.io.*;
+public class diffevenodd {
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+ 		BufferedReader br=new BufferedReader(isr);
+ 		int n,r,s_e=0,s_o=0;
+ 		n=Integer.parseInt(br.readLine());
+ 		while(n>0)
+ 		{
+ 			r=n%10;
+ 			if(r%2==0)
+ 				s_e+=r;
+ 			else
+ 				s_o+=r;
+ 			n=n/10;
+ 			
+ 		}
+ 		System.out.println(Math.abs(s_e-s_o));
+ 				
+ 		
+	}
+
+}
