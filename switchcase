@@ -1,0 +1,24 @@
+import java.io.*;
+public class switchcase {
+	
+	   public static void main(String args[])throws Exception
+	{
+	   InputStreamReader isr=new InputStreamReader(System.in);
+	   BufferedReader br=new  BufferedReader(isr);
+	   char ch;
+	   ch=(char)br.read();
+	   switch(ch)
+	   {
+	   case 'A':
+	   case 'E':
+	   case 'I':
+	   case 'O':
+	   case 'U':
+		   System.out.println("vowel");
+		   break;
+	   default:
+		   System.out.println(" not vowel");
+		   
+	   }
+	}
+}
