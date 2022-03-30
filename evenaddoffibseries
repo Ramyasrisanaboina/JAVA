@@ -1,0 +1,27 @@
+import java.io.*;
+public class sumofeventermsinfib {
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n;
+		n=Integer.parseInt(br.readLine());
+		int a=0,b=1,i,x=0;
+		int sum=a+b;
+		sum=a+b;
+		while(sum<=n)
+		{
+			a=b;
+			b=sum;
+			sum=a+b;
+			if(sum%2==0)
+			{
+				x+=sum;
+				
+			}
+		}
+		System.out.println(x);
+		
+	}
+
+}
