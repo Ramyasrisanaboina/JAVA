@@ -1,0 +1,23 @@
+import java.io.*;
+public class fibinoci {
+	public static void main(String args[])throws Exception
+	{
+	InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		int n;
+		n=Integer.parseInt(br.readLine());
+		int a=0,b=1,i;
+		int sum=0;
+		System.out.print(a+" ");
+		System.out.print(b+" ");
+		for(i=3;i<=n;i++)
+		{
+			sum=a+b;
+			System.out.print(sum+" ");
+			a=b;
+			b=sum;
+			
+		}
+		
+	}
+}
