@@ -1,0 +1,27 @@
+import java.io.*;
+public class desarium {
+	public static void main(String args[])throws Exception
+	{
+		InputStreamReader isr=new InputStreamReader(System.in);
+ 		BufferedReader br=new BufferedReader(isr);
+ 		int n,i,sum=0,r,d,temp;
+ 		n=Integer.parseInt(br.readLine());
+ 		temp=n;
+ 		d=(int)Math.log10(n)+1;
+ 		while(n>0)
+ 		{
+ 			r=n%10;
+ 			sum=sum+(int)Math.pow(r, d);
+ 			n=n/10;
+ 			d--;
+ 		}
+ 		if(temp==sum) {
+ 			System.out.print(sum+"is desarium number");
+ 			
+ 		}
+ 		else
+ 		System.out.print(sum+"is not a desarium number");
+ 		
+	}
+
+}
