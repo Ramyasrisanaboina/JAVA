@@ -1,0 +1,61 @@
+import java.io.*;
+class Base
+{
+	int x;
+	public void setX(int p)
+	{
+		x=p;
+	}
+	public int getX()
+	{
+		return x;
+	}
+}
+class derived extends Base
+{
+	int y;
+	public void setY(int q)
+	{
+		y=q;
+	}
+	public int getY()
+	{
+		return y;
+	}
+	
+}
+class sub_derived extends derived
+{
+	int z;
+	public void setZ(int r)
+	{
+		z=r;
+	}
+	public int getZ()
+	{
+		return z;
+	}
+
+}
+
+public class multilevel
+{
+
+	public static void main(String[] args) 
+	{
+		sub_derived s=new sub_derived();
+		s.setX(100);
+		s.setY(200);
+		s.setZ(300);
+		System.out.println(s.getX());
+		System.out.println(s.getY());
+		System.out.println(s.getZ());		
+
+
+
+	}
+}
+output:
+100
+200
+300
