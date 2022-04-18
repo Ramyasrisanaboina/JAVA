@@ -1,0 +1,58 @@
+import java.io.*;
+class Base
+{
+	int x;
+	public void setX(int p)
+	{
+		x=p;
+	}
+	public int getX()
+	{
+		return x;
+	}
+}
+class child extends Base
+{
+	int y;
+	public void setY(int p)
+	{
+		y=p;
+	}
+	public int getY()
+	{
+		return y;
+	}
+	
+}
+public class singleinheritance
+{
+
+	public static void main(String[] args) 
+	{
+		Base b=new Base();
+		b.setX(100);
+		System.out.println(b.getX());
+		System.out.println();
+		
+		child c=new child();
+		c.setX(101);
+		System.out.println(c.getX());
+		c.setY(201);
+		System.out.println(c.getY());
+		
+		System.out.println("Parent --> Child");
+		Base b1=new child();
+		b1.setX(301);
+		System.out.println(b1.getX());
+
+		// child c1=new Base(); = Error
+
+	}
+}
+output:
+100
+
+101
+201
+Parent --> Child
+301
