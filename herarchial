@@ -1,0 +1,82 @@
+class A
+{
+	int x;
+	public void setX(int p)
+	{
+		x=p;
+	}
+	public int getX()
+	{
+		return x;
+	}
+}
+class B extends A
+{
+	int y;
+	public void setY(int q)
+	{
+		y=q;
+	}
+	public int getY()
+	{
+		return y;
+	}
+	
+}
+class C extends A
+{
+	int z;
+	public void setZ(int r)
+	{
+		z=r;
+	}
+	public int getZ()
+	{
+		return z;
+	}
+
+}
+class D extends A
+{
+	int w;
+	public void setW(int s)
+	{
+		w=s;
+	}
+	public int getW()
+	{
+		return w;
+	}
+
+}
+public class hierarchial 
+{
+
+	public static void main(String[] args) 
+	{
+		B b=new B();
+		b.setX(100);
+		b.setY(200);
+		System.out.println(b.getX());
+		System.out.println(b.getY());
+		C c=new C();
+		c.setX(300);
+		c.setZ(400);
+		System.out.println(c.getX());
+		System.out.println(c.getZ());
+		D d=new D();
+		d.setX(500);
+		d.setW(600);
+		System.out.println(d.getX());
+		System.out.println(d.getW());
+		
+
+	}
+}
+output:
+100
+200
+300
+400
+500
+600
