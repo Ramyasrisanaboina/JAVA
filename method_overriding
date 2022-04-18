@@ -1,0 +1,84 @@
+In inheritance if both parent and child have same method signature then it is called method overriding.(changing the code of a method)
+method signature:means a method name along with its return type and its parameters.
+
+program1:
+class parent111
+{
+	public void marriage()
+	{
+		System.out.println("kim taehyung");
+	}
+}
+class child111 extends parent111
+{
+	public void ownproperties()
+	{
+		System.out.println("new building");
+		System.out.println("2 acers");
+	}
+	public void marriage()
+	{
+		System.out.println("park jimin");
+	}
+}
+public class methodoverriding {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		child111 c=new child111();
+		c.marriage();
+		c.ownproperties();
+		
+
+	}
+
+}
+output:
+park jimin
+new building
+2 acers
+
+program2:
+class parent111
+{
+	public void show()
+	{
+		System.out.println("parent show method");
+	}
+	public void display()
+	{
+		System.out.println("parent display method");
+	}
+}
+class child111 extends parent111
+{
+	public void show()
+	{
+		System.out.println("child show method");
+	
+	}
+	public void msg()
+	{
+		System.out.println("child msg method");
+	}
+}
+public class methodoverriding {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		child111 c=new child111();
+		c.show();
+		c.display();
+		c.msg();
+		
+
+	}
+
+}
+
+output:
+child show method
+parent display method
+child msg method
+
+
