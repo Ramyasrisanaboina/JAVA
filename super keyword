@@ -1,0 +1,43 @@
+after method overriding if we want to acess the parent class method we use super keyword.
+class parent111
+{
+	public void show()
+	{
+		System.out.println("parent show method");
+	}
+	public void display()
+	{
+		System.out.println("parent display method");
+	}
+}
+class child111 extends parent111
+{
+	public void show()
+	{
+		super.show();
+		System.out.println("child show method");
+	
+	}
+	public void msg()
+	{
+		System.out.println("child msg method");
+	}
+}
+public class methodoverriding {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		child111 c=new child111();
+		c.show();
+		c.display();
+		c.msg();
+
+
+	}
+
+}
+output:
+parent show method
+child show method
+parent display method
+child msg method
