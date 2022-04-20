@@ -41,3 +41,66 @@ parent show method
 child show method
 parent display method
 child msg method
+*method overriding is used to execute its own behaviour by hiding the implementation of parent class.
+but in some cases there is need to call parent class method through child class then we use super class.
+eg:
+import java.util.Scanner;
+class number1 {
+	int x;
+	Scanner sc=new Scanner(System.in);
+	public void getno()
+	{
+		System.out.println("enter a number");
+		x=sc.nextInt();
+		
+	}
+	void show()
+	{
+		System.out.println("decimaal:"+x);
+	}
+	
+
+}
+class hexa extends number1{
+	void show()
+	{
+		super.show();
+		System.out.println("hexa:"+Integer.toHexString(x));
+		
+	}
+}
+class octal extends number1
+{
+	void show()
+	{
+		super.show();
+		System.out.println("octal:"+Integer.toOctalString(x));
+	}
+}
+public class number
+{
+	public static void main(String[] args)
+	{
+		hexa h=new hexa();
+		octal o=new octal();
+		h.getno();
+		h.show();
+		System.out.println();
+		o.getno();
+		o.show();
+		
+		
+	}
+}
+output:
+enter a number
+13
+decimaal:13
+hexa:d
+
+enter a number
+13
+decimaal:13
+octal:15
+
+
