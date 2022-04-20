@@ -1,0 +1,28 @@
+class parent21
+{
+	public parent21()
+	{
+  output:
+  good morning guest
+good morning jimin
+
+		System.out.println("good morning guest");
+		
+	}
+	public parent21(String name)
+	{
+		this();//first executes default constructor
+		System.out.println("good morning "+name);
+	}
+}
+public class super1 {
+	public static void main(String[] args)
+	{
+		parent21 p=new parent21("jimin");
+	}
+
+}
+
+output:
+good morning guest
+good morning jimin
