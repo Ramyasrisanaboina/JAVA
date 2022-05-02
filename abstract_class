@@ -1,0 +1,66 @@
+import java.util.Scanner;
+public abstract class abstractp{
+	float s1,s2;
+	final float pi=3.142f;
+	Scanner sc=new Scanner(System.in);
+	public  abstract void get_input();
+	public  abstract float cal_area();
+	public static void main(String[] args)
+	{
+		abstractp s=new rect();
+		s.get_input();
+		System.out.println(s.cal_area());
+		abstractp sq=new squre();
+		sq.get_input();
+		System.out.println(sq.cal_area());
+		abstractp c=new circle();
+		c.get_input();
+		System.out.println(c.cal_area());
+		
+		
+		
+	}
+	
+}
+class rect extends abstractp
+{
+	public void get_input()
+	{
+		System.out.println("enter the sides of rectangle");
+		s1=sc.nextInt();
+		s2=sc.nextInt();
+		
+	}
+	public float cal_area()
+	{
+		return s1*s2;
+	}
+}
+class circle extends abstractp
+{
+	public void get_input()
+	{
+		System.out.println("enter radius of the circle");
+		s1=sc.nextInt();
+		
+		
+	}
+	public float cal_area()
+	{
+		return pi*s1*s1;
+	}
+}
+class squre extends abstractp
+{
+	public void get_input()
+	{
+		System.out.println("enter the sides of squre");
+		s1=sc.nextInt();
+		
+		
+	}
+	public float cal_area()
+	{
+		return s1*s1;
+	}
+}
