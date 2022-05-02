@@ -64,3 +64,19 @@ class squre extends abstractp
 		return s1*s1;
 	}
 }
+
+output:
+enter the sides of rectangle
+
+3
+2
+6.0
+enter the sides of squre
+
+2
+4.0
+enter radius of the circle
+
+13
+530.998
+
